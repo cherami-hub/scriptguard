@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the manuscript below."
+title: "ScriptGuard: an almost-parametric, fully auditable detector for Chinese fraud-script SMS under keyword-targeted evasion"
+type: software
+license: MIT
+repository-code: "https://github.com/<OWNER>/scriptguard"
+keywords:
+  - fraud detection
+  - SMS
+  - Chinese
+  - adversarial robustness
+  - text normalization
+  - rule-based detection
+  - explainability
+authors:
+  - family-names: Luan
+    given-names: Runsheng
+    email: rsl229560@seu.edu.cn
+    affiliation: "School of Cyberspace Security, Southeast University, Nanjing, China"
+    orcid: ""
+  - family-names: Yang
+    given-names: Ming
+    affiliation: "School of Cyberspace Security, Southeast University, Nanjing, China"
+  - family-names: Jiang
+    given-names: Ping
+    affiliation: "School of Cyberspace Security, Southeast University, Nanjing, China"
+  - family-names: Wang
+    given-names: Xiaogang
+    affiliation: ""
+contact:
+  - family-names: Luan
+    given-names: Runsheng
+    email: rsl229560@seu.edu.cn

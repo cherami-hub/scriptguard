@@ -1,0 +1,27 @@
+# ---- data (never commit the corpus itself) ----
+data/FBS_SMS_Dataset-master/
+data/fbs_messages.csv
+data/*.csv
+data/*.txt
+!data/README.md
+
+# ---- generated outputs ----
+figures/_qa/
+results/*.tmp
+results/**/*.tmp
+*.log
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---- editors / os ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+~$*

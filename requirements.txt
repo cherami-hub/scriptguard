@@ -1,0 +1,19 @@
+# Core experiment dependencies.
+# Installed versions used for the results in the paper are noted in comments.
+
+numpy>=1.24           # 1.26.4
+scipy>=1.10           # 1.11.4
+scikit-learn>=1.3     # 1.4.0
+pypinyin>=0.49        # 0.51.0  (homophone / pinyin-initial variant generation)
+matplotlib>=3.7       # 3.8.2   (figures only)
+
+# Only needed for run_llm_eval.py
+requests>=2.28        # 2.31.0
+
+# Only needed for run_bert_baseline.py (fine-tuned RoBERTa ceiling).
+# The paper reports these numbers, but the core results do not require them.
+# torch>=2.0
+# transformers>=4.30
+
+# Only needed for run_llm_eval.py, whichever vendor SDKs you use.
+# openai>=1.10

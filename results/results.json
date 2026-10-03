@@ -1,0 +1,1005 @@
+{
+ "dataset": {
+  "total": 13960,
+  "train": 11168,
+  "test": 2792,
+  "top_dist": {
+   "AD": 8327,
+   "FR": 3056,
+   "IL": 2577
+  },
+  "fine_dist": {
+   "AD_Loan": 283,
+   "AD_Network_service": 2127,
+   "AD_Other": 926,
+   "AD_Real_estate": 322,
+   "AD_Retail": 4669,
+   "FR_Financial": 164,
+   "FR_Other": 695,
+   "FR_Phishing_Bank": 1900,
+   "FR_Phishing_Other": 297,
+   "IL_Escort_service": 111,
+   "IL_Fake_ID_and_invoice": 495,
+   "IL_Gambling": 1681,
+   "IL_Political_propaganda": 290
+  },
+  "avg_len": 62.9
+ },
+ "T1_clean": {
+  "M1": {
+   "acc": 0.986,
+   "macroP": 0.988,
+   "macroR": 0.9831,
+   "macroF1": 0.9854,
+   "posF1": 0.9824
+  },
+  "M2": {
+   "acc": 0.9907,
+   "macroP": 0.9918,
+   "macroR": 0.9889,
+   "macroF1": 0.9903,
+   "posF1": 0.9884
+  },
+  "M3": {
+   "acc": 0.4706,
+   "macroP": 0.4932,
+   "macroR": 0.4934,
+   "macroF1": 0.4704,
+   "posF1": 0.4825
+  },
+  "M4": {
+   "acc": 0.9889,
+   "macroP": 0.99,
+   "macroR": 0.987,
+   "macroF1": 0.9884,
+   "posF1": 0.9861
+  }
+ },
+ "T3_robust": {
+  "0.3": {
+   "M1": {
+    "acc": 0.9853,
+    "macroP": 0.9871,
+    "macroR": 0.9825,
+    "macroF1": 0.9847,
+    "posF1": 0.9816
+   },
+   "M2": {
+    "acc": 0.99,
+    "macroP": 0.9912,
+    "macroR": 0.988,
+    "macroF1": 0.9896,
+    "posF1": 0.9875
+   },
+   "M4": {
+    "acc": 0.9878,
+    "macroP": 0.9891,
+    "macroR": 0.9856,
+    "macroF1": 0.9873,
+    "posF1": 0.9848
+   },
+   "M3": {
+    "acc": 0.5258,
+    "macroP": 0.5218,
+    "macroR": 0.5226,
+    "macroF1": 0.5192,
+    "posF1": 0.4627
+   }
+  },
+  "0.5": {
+   "M1": {
+    "acc": 0.9846,
+    "macroP": 0.9865,
+    "macroR": 0.9816,
+    "macroF1": 0.9839,
+    "posF1": 0.9806
+   },
+   "M2": {
+    "acc": 0.9885,
+    "macroP": 0.9899,
+    "macroR": 0.9864,
+    "macroF1": 0.9881,
+    "posF1": 0.9857
+   },
+   "M4": {
+    "acc": 0.9842,
+    "macroP": 0.9856,
+    "macroR": 0.9818,
+    "macroF1": 0.9836,
+    "posF1": 0.9803
+   },
+   "M3": {
+    "acc": 0.5423,
+    "macroP": 0.5259,
+    "macroR": 0.526,
+    "macroF1": 0.5259,
+    "posF1": 0.438
+   }
+  },
+  "0.7": {
+   "M1": {
+    "acc": 0.9839,
+    "macroP": 0.9859,
+    "macroR": 0.9808,
+    "macroF1": 0.9832,
+    "posF1": 0.9797
+   },
+   "M2": {
+    "acc": 0.9878,
+    "macroP": 0.9895,
+    "macroR": 0.9853,
+    "macroF1": 0.9873,
+    "posF1": 0.9847
+   },
+   "M4": {
+    "acc": 0.9846,
+    "macroP": 0.9865,
+    "macroR": 0.9816,
+    "macroF1": 0.9839,
+    "posF1": 0.9806
+   },
+   "M3": {
+    "acc": 0.5598,
+    "macroP": 0.5244,
+    "macroR": 0.5211,
+    "macroF1": 0.5159,
+    "posF1": 0.3701
+   }
+  }
+ },
+ "T2_fine": {
+  "M1": {
+   "clean": {
+    "acc": 0.9649,
+    "macroP": 0.9793,
+    "macroR": 0.912,
+    "macroF1": 0.9399
+   },
+   "p0.3": {
+    "acc": 0.9624,
+    "macroP": 0.9783,
+    "macroR": 0.9081,
+    "macroF1": 0.9374
+   }
+  },
+  "M4": {
+   "clean": {
+    "acc": 0.9681,
+    "macroP": 0.9789,
+    "macroR": 0.9282,
+    "macroF1": 0.9506
+   },
+   "p0.3": {
+    "acc": 0.9592,
+    "macroP": 0.9765,
+    "macroR": 0.9126,
+    "macroF1": 0.9398
+   }
+  }
+ },
+ "T4_ablation": {
+  "full": {
+   "clean": {
+    "acc": 0.9889,
+    "macroP": 0.99,
+    "macroR": 0.987,
+    "macroF1": 0.9884,
+    "posF1": 0.9861
+   },
+   "p0.3": {
+    "acc": 0.9878,
+    "macroP": 0.9891,
+    "macroR": 0.9856,
+    "macroF1": 0.9873,
+    "posF1": 0.9848
+   }
+  },
+  "w/o_rules": {
+   "clean": {
+    "acc": 0.9857,
+    "macroP": 0.9876,
+    "macroR": 0.9828,
+    "macroF1": 0.9851,
+    "posF1": 0.982
+   },
+   "p0.3": {
+    "acc": 0.9857,
+    "macroP": 0.9877,
+    "macroR": 0.9827,
+    "macroF1": 0.985,
+    "posF1": 0.982
+   }
+  },
+  "w/o_norm": {
+   "clean": {
+    "acc": 0.9893,
+    "macroP": 0.9905,
+    "macroR": 0.9873,
+    "macroF1": 0.9888,
+    "posF1": 0.9866
+   },
+   "p0.3": {
+    "acc": 0.9853,
+    "macroP": 0.9871,
+    "macroR": 0.9825,
+    "macroF1": 0.9847,
+    "posF1": 0.9816
+   }
+  },
+  "neither(M1)": {
+   "clean": {
+    "acc": 0.986,
+    "macroP": 0.988,
+    "macroR": 0.9831,
+    "macroF1": 0.9854,
+    "posF1": 0.9824
+   },
+   "p0.3": {
+    "acc": 0.9853,
+    "macroP": 0.9871,
+    "macroR": 0.9825,
+    "macroF1": 0.9847,
+    "posF1": 0.9816
+   }
+  }
+ },
+ "T4b_types": {
+  "homophone": {
+   "M1": {
+    "acc": 0.9835,
+    "macroP": 0.9851,
+    "macroR": 0.9807,
+    "macroF1": 0.9828,
+    "posF1": 0.9793
+   },
+   "M4": {
+    "acc": 0.9835,
+    "macroP": 0.9853,
+    "macroR": 0.9806,
+    "macroF1": 0.9828,
+    "posF1": 0.9793
+   }
+  },
+  "pinyin_init": {
+   "M1": {
+    "acc": 0.9824,
+    "macroP": 0.9848,
+    "macroR": 0.979,
+    "macroF1": 0.9817,
+    "posF1": 0.9779
+   },
+   "M4": {
+    "acc": 0.9828,
+    "macroP": 0.9849,
+    "macroR": 0.9796,
+    "macroF1": 0.982,
+    "posF1": 0.9784
+   }
+  },
+  "symbol_insert": {
+   "M1": {
+    "acc": 0.9853,
+    "macroP": 0.9873,
+    "macroR": 0.9824,
+    "macroF1": 0.9847,
+    "posF1": 0.9815
+   },
+   "M4": {
+    "acc": 0.9889,
+    "macroP": 0.99,
+    "macroR": 0.987,
+    "macroF1": 0.9884,
+    "posF1": 0.9861
+   }
+  },
+  "traditional": {
+   "M1": {
+    "acc": 0.985,
+    "macroP": 0.9868,
+    "macroR": 0.9821,
+    "macroF1": 0.9843,
+    "posF1": 0.9811
+   },
+   "M4": {
+    "acc": 0.9889,
+    "macroP": 0.99,
+    "macroR": 0.987,
+    "macroF1": 0.9884,
+    "posF1": 0.9861
+   }
+  },
+  "lookalike": {
+   "M1": {
+    "acc": 0.986,
+    "macroP": 0.988,
+    "macroR": 0.9831,
+    "macroF1": 0.9854,
+    "posF1": 0.9824
+   },
+   "M4": {
+    "acc": 0.9882,
+    "macroP": 0.9891,
+    "macroR": 0.9864,
+    "macroF1": 0.9877,
+    "posF1": 0.9852
+   }
+  },
+  "fullwidth": {
+   "M1": {
+    "acc": 0.9853,
+    "macroP": 0.9876,
+    "macroR": 0.9821,
+    "macroF1": 0.9847,
+    "posF1": 0.9815
+   },
+   "M4": {
+    "acc": 0.9889,
+    "macroP": 0.99,
+    "macroR": 0.987,
+    "macroF1": 0.9884,
+    "posF1": 0.9861
+   }
+  },
+  "emoji_noise": {
+   "M1": {
+    "acc": 0.9853,
+    "macroP": 0.9871,
+    "macroR": 0.9825,
+    "macroF1": 0.9847,
+    "posF1": 0.9816
+   },
+   "M4": {
+    "acc": 0.9889,
+    "macroP": 0.99,
+    "macroR": 0.987,
+    "macroF1": 0.9884,
+    "posF1": 0.9861
+   }
+  },
+  "deletion": {
+   "M1": {
+    "acc": 0.9817,
+    "macroP": 0.9842,
+    "macroR": 0.9781,
+    "macroF1": 0.9809,
+    "posF1": 0.977
+   },
+   "M4": {
+    "acc": 0.9824,
+    "macroP": 0.9848,
+    "macroR": 0.979,
+    "macroF1": 0.9817,
+    "posF1": 0.9779
+   }
+  }
+ },
+ "T5_profiles": {
+  "structural": {
+   "M0_keyword_filter": {
+    "acc": 0.5093,
+    "macroP": 0.5238,
+    "macroR": 0.5242,
+    "macroF1": 0.509,
+    "posF1": 0.4974
+   },
+   "M1": {
+    "acc": 0.9864,
+    "macroP": 0.9883,
+    "macroR": 0.9836,
+    "macroF1": 0.9858,
+    "posF1": 0.9829
+   },
+   "M3": {
+    "acc": 0.5086,
+    "macroP": 0.507,
+    "macroR": 0.5073,
+    "macroF1": 0.5032,
+    "posF1": 0.4512
+   },
+   "M4": {
+    "acc": 0.9889,
+    "macroP": 0.99,
+    "macroR": 0.987,
+    "macroF1": 0.9884,
+    "posF1": 0.9861
+   }
+  },
+  "mixed": {
+   "M0_keyword_filter": {
+    "acc": 0.5426,
+    "macroP": 0.5395,
+    "macroR": 0.541,
+    "macroF1": 0.5367,
+    "posF1": 0.4845
+   },
+   "M1": {
+    "acc": 0.9846,
+    "macroP": 0.9865,
+    "macroR": 0.9816,
+    "macroF1": 0.9839,
+    "posF1": 0.9806
+   },
+   "M3": {
+    "acc": 0.5423,
+    "macroP": 0.5259,
+    "macroR": 0.526,
+    "macroF1": 0.5259,
+    "posF1": 0.438
+   },
+   "M4": {
+    "acc": 0.9842,
+    "macroP": 0.9856,
+    "macroR": 0.9818,
+    "macroF1": 0.9836,
+    "posF1": 0.9803
+   }
+  },
+  "destructive": {
+   "M0_keyword_filter": {
+    "acc": 0.5652,
+    "macroP": 0.5453,
+    "macroR": 0.5445,
+    "macroF1": 0.5447,
+    "posF1": 0.4482
+   },
+   "M1": {
+    "acc": 0.9846,
+    "macroP": 0.9867,
+    "macroR": 0.9815,
+    "macroF1": 0.9839,
+    "posF1": 0.9806
+   },
+   "M3": {
+    "acc": 0.5623,
+    "macroP": 0.5311,
+    "macroR": 0.528,
+    "macroF1": 0.5251,
+    "posF1": 0.392
+   },
+   "M4": {
+    "acc": 0.981,
+    "macroP": 0.9833,
+    "macroR": 0.9775,
+    "macroF1": 0.9802,
+    "posF1": 0.9761
+   }
+  }
+ },
+ "M0_clean": {
+  "acc": 0.467,
+  "macroP": 0.5048,
+  "macroR": 0.5043,
+  "macroF1": 0.4621,
+  "posF1": 0.5137
+ },
+ "T6_length": {
+  "short(<=40)": {
+   "n": 329,
+   "M1": {
+    "acc": 0.9666,
+    "macroP": 0.9549,
+    "macroR": 0.9675,
+    "macroF1": 0.9608,
+    "posF1": 0.9758
+   },
+   "M4": {
+    "acc": 0.9696,
+    "macroP": 0.9615,
+    "macroR": 0.9668,
+    "macroF1": 0.9641,
+    "posF1": 0.9782
+   }
+  },
+  "mid(41-80)": {
+   "n": 2049,
+   "M1": {
+    "acc": 0.9878,
+    "macroP": 0.9894,
+    "macroR": 0.9856,
+    "macroF1": 0.9874,
+    "posF1": 0.9851
+   },
+   "M4": {
+    "acc": 0.9873,
+    "macroP": 0.9884,
+    "macroR": 0.9856,
+    "macroF1": 0.9869,
+    "posF1": 0.9846
+   }
+  },
+  "long(>80)": {
+   "n": 414,
+   "M1": {
+    "acc": 0.9831,
+    "macroP": 0.9906,
+    "macroR": 0.9255,
+    "macroF1": 0.955,
+    "posF1": 0.9195
+   },
+   "M4": {
+    "acc": 0.9807,
+    "macroP": 0.9893,
+    "macroR": 0.9149,
+    "macroF1": 0.9481,
+    "posF1": 0.907
+   }
+  }
+ },
+ "adv_samples": [
+  {
+   "orig": "中国银行尊敬的中国银行信用卡用户我行邀请您提高您的信用卡固定额度请进入URL填写申请",
+   "adv": "中国银*行尊敬的中囯银▲行信用#卡 用户我行邀请您提高您的信用卡固定额度请进入URL填写申请",
+   "norm": "中国银行尊敬的中囯银行信用卡用户我行邀请您提高您的信用卡固定额度请进入URL填写申请",
+   "label": "FR_Phishing_Bank"
+  }
+ ],
+ "M0_vs_p": {
+  "0.0": {
+   "P": 0.4066,
+   "R": 0.6974,
+   "F1": 0.5137
+  },
+  "0.3": {
+   "P": 0.4265,
+   "R": 0.5998,
+   "F1": 0.4985
+  },
+  "0.5": {
+   "P": 0.4447,
+   "R": 0.5209,
+   "F1": 0.4798
+  },
+  "0.7": {
+   "P": 0.4589,
+   "R": 0.4259,
+   "F1": 0.4418
+  }
+ },
+ "M0_profiles": {
+  "structural": {
+   "P": 0.424,
+   "R": 0.6016,
+   "F1": 0.4974
+  },
+  "destructive": {
+   "P": 0.4475,
+   "R": 0.4383,
+   "F1": 0.4429
+  }
+ },
+ "T7_llm_meta": {
+  "subset_n": 300,
+  "models": [
+   "deepseek-chat",
+   "gpt-4o-mini",
+   "qwen-plus"
+  ]
+ },
+ "T7_llm_multi": {
+  "deepseek-chat": {
+   "clean": {
+    "LLM-zs": {
+     "acc": 0.9033,
+     "macroF1": 0.9031,
+     "fraudP": 0.8667,
+     "fraudR": 0.9533,
+     "fraudF1": 0.9079,
+     "parse_failures": 0
+    },
+    "LLM-rc": {
+     "acc": 0.7033,
+     "macroF1": 0.6922,
+     "fraudP": 0.6473,
+     "fraudR": 0.8933,
+     "fraudF1": 0.7507,
+     "parse_failures": 0
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.9833,
+     "macroF1": 0.9833,
+     "fraudP": 0.9932,
+     "fraudR": 0.9733,
+     "fraudF1": 0.9832
+    }
+   },
+   "mixed_p0.5": {
+    "LLM-zs": {
+     "acc": 0.8667,
+     "macroF1": 0.8657,
+     "fraudP": 0.8125,
+     "fraudR": 0.9533,
+     "fraudF1": 0.8773,
+     "parse_failures": 0
+    },
+    "LLM-rc": {
+     "acc": 0.7,
+     "macroF1": 0.6884,
+     "fraudP": 0.6442,
+     "fraudR": 0.8933,
+     "fraudF1": 0.7486,
+     "parse_failures": 0
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    }
+   },
+   "destructive_p0.5": {
+    "LLM-zs": {
+     "acc": 0.8433,
+     "macroF1": 0.8416,
+     "fraudP": 0.7845,
+     "fraudR": 0.9467,
+     "fraudF1": 0.858,
+     "parse_failures": 0
+    },
+    "LLM-rc": {
+     "acc": 0.73,
+     "macroF1": 0.7226,
+     "fraudP": 0.6734,
+     "fraudR": 0.8933,
+     "fraudF1": 0.7679,
+     "parse_failures": 0
+    },
+    "M1": {
+     "acc": 0.9833,
+     "macroF1": 0.9833,
+     "fraudP": 0.9932,
+     "fraudR": 0.9733,
+     "fraudF1": 0.9832
+    },
+    "M4": {
+     "acc": 0.9833,
+     "macroF1": 0.9833,
+     "fraudP": 0.9932,
+     "fraudR": 0.9733,
+     "fraudF1": 0.9832
+    }
+   }
+  },
+  "qwen-plus": {
+   "clean": {
+    "LLM-zs": {
+     "acc": 0.8259,
+     "macroF1": 0.8226,
+     "fraudP": 0.7421,
+     "fraudR": 0.986,
+     "fraudF1": 0.8468,
+     "parse_failures": 7
+    },
+    "LLM-rc": {
+     "acc": 0.7509,
+     "macroF1": 0.7392,
+     "fraudP": 0.6651,
+     "fraudR": 0.986,
+     "fraudF1": 0.7944,
+     "parse_failures": 7
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.9833,
+     "macroF1": 0.9833,
+     "fraudP": 0.9932,
+     "fraudR": 0.9733,
+     "fraudF1": 0.9832
+    }
+   },
+   "mixed_p0.5": {
+    "LLM-zs": {
+     "acc": 0.7406,
+     "macroF1": 0.7272,
+     "fraudP": 0.6558,
+     "fraudR": 0.986,
+     "fraudF1": 0.7877,
+     "parse_failures": 7
+    },
+    "LLM-rc": {
+     "acc": 0.7031,
+     "macroF1": 0.6817,
+     "fraudP": 0.6239,
+     "fraudR": 0.986,
+     "fraudF1": 0.7642,
+     "parse_failures": 7
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.9833,
+     "macroF1": 0.9833,
+     "fraudP": 0.9932,
+     "fraudR": 0.9733,
+     "fraudF1": 0.9832
+    }
+   },
+   "destructive_p0.5": {
+    "LLM-zs": {
+     "acc": 0.7406,
+     "macroF1": 0.7263,
+     "fraudP": 0.6544,
+     "fraudR": 0.993,
+     "fraudF1": 0.7889,
+     "parse_failures": 7
+    },
+    "LLM-rc": {
+     "acc": 0.7201,
+     "macroF1": 0.7037,
+     "fraudP": 0.6393,
+     "fraudR": 0.979,
+     "fraudF1": 0.7735,
+     "parse_failures": 7
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.9767,
+     "macroF1": 0.9767,
+     "fraudP": 0.9931,
+     "fraudR": 0.96,
+     "fraudF1": 0.9763
+    }
+   }
+  },
+  "gpt-4o-mini": {
+   "clean": {
+    "LLM-zs": {
+     "acc": 0.83,
+     "macroF1": 0.829,
+     "fraudP": 0.7861,
+     "fraudR": 0.9067,
+     "fraudF1": 0.8421,
+     "parse_failures": 0
+    },
+    "LLM-rc": {
+     "acc": 0.6033,
+     "macroF1": 0.5738,
+     "fraudP": 0.5677,
+     "fraudR": 0.8667,
+     "fraudF1": 0.686,
+     "parse_failures": 0
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.9833,
+     "macroF1": 0.9833,
+     "fraudP": 0.9932,
+     "fraudR": 0.9733,
+     "fraudF1": 0.9832
+    }
+   },
+   "mixed_p0.5": {
+    "LLM-zs": {
+     "acc": 0.7467,
+     "macroF1": 0.7382,
+     "fraudP": 0.6814,
+     "fraudR": 0.9267,
+     "fraudF1": 0.7853,
+     "parse_failures": 0
+    },
+    "LLM-rc": {
+     "acc": 0.6167,
+     "macroF1": 0.5911,
+     "fraudP": 0.5778,
+     "fraudR": 0.8667,
+     "fraudF1": 0.6933,
+     "parse_failures": 0
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.9833,
+     "macroF1": 0.9833,
+     "fraudP": 0.9932,
+     "fraudR": 0.9733,
+     "fraudF1": 0.9832
+    }
+   },
+   "destructive_p0.5": {
+    "LLM-zs": {
+     "acc": 0.7467,
+     "macroF1": 0.7368,
+     "fraudP": 0.6779,
+     "fraudR": 0.94,
+     "fraudF1": 0.7877,
+     "parse_failures": 0
+    },
+    "LLM-rc": {
+     "acc": 0.6567,
+     "macroF1": 0.6447,
+     "fraudP": 0.6146,
+     "fraudR": 0.84,
+     "fraudF1": 0.7099,
+     "parse_failures": 0
+    },
+    "M1": {
+     "acc": 0.98,
+     "macroF1": 0.98,
+     "fraudP": 0.9932,
+     "fraudR": 0.9667,
+     "fraudF1": 0.9797
+    },
+    "M4": {
+     "acc": 0.9667,
+     "macroF1": 0.9666,
+     "fraudP": 0.993,
+     "fraudR": 0.94,
+     "fraudF1": 0.9658
+    }
+   }
+  }
+ },
+ "T8_bert": {
+  "model": "hfl/chinese-roberta-wwm-ext",
+  "seeds": [
+   42,
+   43,
+   44
+  ],
+  "epochs": 2,
+  "batch": 16,
+  "maxlen": 96,
+  "device": "cpu",
+  "runs": [
+   {
+    "clean": {
+     "acc": 0.9946,
+     "macroF1": 0.9944,
+     "fraudP": 0.9947,
+     "fraudR": 0.992,
+     "fraudF1": 0.9933
+    },
+    "p0.3": {
+     "acc": 0.9936,
+     "macroF1": 0.9933,
+     "fraudP": 0.9938,
+     "fraudR": 0.9902,
+     "fraudF1": 0.992
+    },
+    "p0.5": {
+     "acc": 0.9936,
+     "macroF1": 0.9933,
+     "fraudP": 0.992,
+     "fraudR": 0.992,
+     "fraudF1": 0.992
+    },
+    "p0.7": {
+     "acc": 0.9936,
+     "macroF1": 0.9933,
+     "fraudP": 0.9929,
+     "fraudR": 0.9911,
+     "fraudF1": 0.992
+    }
+   },
+   {
+    "clean": {
+     "acc": 0.9925,
+     "macroF1": 0.9922,
+     "fraudP": 0.9964,
+     "fraudR": 0.9849,
+     "fraudF1": 0.9906
+    },
+    "p0.3": {
+     "acc": 0.9928,
+     "macroF1": 0.9925,
+     "fraudP": 0.9964,
+     "fraudR": 0.9858,
+     "fraudF1": 0.9911
+    },
+    "p0.5": {
+     "acc": 0.9932,
+     "macroF1": 0.9929,
+     "fraudP": 0.9955,
+     "fraudR": 0.9876,
+     "fraudF1": 0.9915
+    },
+    "p0.7": {
+     "acc": 0.9918,
+     "macroF1": 0.9914,
+     "fraudP": 0.9937,
+     "fraudR": 0.9858,
+     "fraudF1": 0.9898
+    }
+   },
+   {
+    "clean": {
+     "acc": 0.9957,
+     "macroF1": 0.9955,
+     "fraudP": 0.9956,
+     "fraudR": 0.9938,
+     "fraudF1": 0.9947
+    },
+    "p0.3": {
+     "acc": 0.9953,
+     "macroF1": 0.9952,
+     "fraudP": 0.9947,
+     "fraudR": 0.9938,
+     "fraudF1": 0.9942
+    },
+    "p0.5": {
+     "acc": 0.9946,
+     "macroF1": 0.9944,
+     "fraudP": 0.9929,
+     "fraudR": 0.9938,
+     "fraudF1": 0.9933
+    },
+    "p0.7": {
+     "acc": 0.9914,
+     "macroF1": 0.9911,
+     "fraudP": 0.9868,
+     "fraudR": 0.992,
+     "fraudF1": 0.9894
+    }
+   }
+  ],
+  "agg": {
+   "clean": {
+    "macroF1_mean": 0.994,
+    "macroF1_std": 0.0014,
+    "fraudF1_mean": 0.9929,
+    "fraudF1_std": 0.0017
+   },
+   "p0.3": {
+    "macroF1_mean": 0.9937,
+    "macroF1_std": 0.0011,
+    "fraudF1_mean": 0.9924,
+    "fraudF1_std": 0.0013
+   },
+   "p0.5": {
+    "macroF1_mean": 0.9935,
+    "macroF1_std": 0.0006,
+    "fraudF1_mean": 0.9923,
+    "fraudF1_std": 0.0008
+   },
+   "p0.7": {
+    "macroF1_mean": 0.9919,
+    "macroF1_std": 0.001,
+    "fraudF1_mean": 0.9904,
+    "fraudF1_std": 0.0011
+   }
+  }
+ },
+ "_note": "adv_samples has been reduced to the single bank-phishing message reproduced in Figure 5 of the paper; the other sampled messages are illegal-content material and are not redistributed."
+}
