@@ -362,7 +362,17 @@ def fig4_confusion():
     norm = cm / row
 
     fig, ax = plt.subplots(figsize=(4.75, 4.20))
-    im = ax.imshow(norm, cmap="Blues", vmin=0, vmax=1, aspect="equal")
+    # pcolormesh, not imshow: matplotlib's PDF backend always rasterises an
+    # AxesImage (and the colorbar built from it), which would embed a ~77 dpi
+    # bitmap in the manuscript. A QuadMesh is emitted as filled vector paths,
+    # so the heatmap stays sharp at any zoom and passes the 300 dpi rule.
+    n = len(ticks)
+    edges = np.arange(n + 1) - 0.5
+    im = ax.pcolormesh(edges, edges, norm, cmap="Blues", vmin=0, vmax=1,
+                       shading="flat", antialiased=False, edgecolors="none")
+    ax.set_aspect("equal")
+    ax.set_xlim(-0.5, n - 0.5)
+    ax.set_ylim(n - 0.5, -0.5)          # row 0 on top, as imshow would have it
     ax.set_xticks(range(len(ticks)))
     ax.set_yticks(range(len(ticks)))
     ax.set_xticklabels(ticks, rotation=45, ha="right", fontsize=6.4)
@@ -381,9 +391,25 @@ def fig4_confusion():
             ax.text(j, i, str(v), ha="center", va="center", fontsize=4.7,
                     color="white" if norm[i, j] > 0.55 else "#222222")
 
-    cb = fig.colorbar(im, ax=ax, fraction=0.045, pad=0.03)
-    cb.set_label("row-normalised frequency", fontsize=7)
-    cb.ax.tick_params(labelsize=6.5)
+    # Hand-drawn vector colorbar. matplotlib's Colorbar renders the gradient
+    # as a small 16x324 AxesImage (~77 dpi once printed), so we lay it out
+    # ourselves as a QuadMesh in an inset axes: fully vector, and it keeps the
+    # whole figure "vector only" so it clears the journal artwork check.
+    cax = ax.inset_axes([1.035, 0.0, 0.042, 1.0])
+    cax.pcolormesh([0.0, 1.0], np.linspace(0.0, 1.0, 257),
+                   np.linspace(0.0, 1.0, 256).reshape(-1, 1),
+                   cmap="Blues", vmin=0, vmax=1, shading="flat",
+                   antialiased=False, edgecolors="none")
+    cax.set_xlim(0.0, 1.0)
+    cax.set_ylim(0.0, 1.0)
+    cax.set_xticks([])
+    cax.yaxis.tick_right()
+    cax.yaxis.set_label_position("right")
+    cax.set_yticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
+    cax.tick_params(labelsize=6.5, length=2, pad=1.5)
+    cax.set_ylabel("row-normalised frequency", fontsize=7, labelpad=2.5)
+    for s in cax.spines.values():
+        s.set_linewidth(0.6)
     _save(fig, "fig4")
 
 
