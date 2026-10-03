@@ -112,7 +112,10 @@ DEBUG = bool(os.environ.get("FIG_DEBUG"))
 # ============================================================ small helpers
 def _save(fig, name):
     p = os.path.join(OUT, name + ".pdf")
-    fig.savefig(p)
+    # Omit the PDF creation/modification dates so that re-running the script
+    # reproduces byte-identical files (otherwise every run rewrites every
+    # figure with a fresh timestamp, which pollutes diffs and version control).
+    fig.savefig(p, metadata={"CreationDate": None, "ModDate": None})
     plt.close(fig)
     print("  wrote  %s  (%.2f x %.2f in)" % (name + ".pdf", *fig.get_size_inches()))
 
