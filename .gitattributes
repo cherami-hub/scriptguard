@@ -1,0 +1,12 @@
+# Normalise line endings on commit; keep the working tree native.
+* text=auto
+*.py   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.cff  text eol=lf
+*.txt  text eol=lf
+
+# PDFs are binary artefacts, never diffed as text.
+*.pdf  binary
+*.npz  binary
+*.png  binary
