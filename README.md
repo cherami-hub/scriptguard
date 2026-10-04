@@ -2,16 +2,17 @@
 
 Reference implementation and experiment code for the manuscript
 
-> **ScriptGuard: an almost-parametric, fully auditable detector for Chinese
-> fraud-script SMS under keyword-targeted evasion**
-> Runsheng Luan, Ming Yang, Ping Jiang, Xiaogang Wang
+> **Keyword-targeted evasion of Chinese SMS filters: an adversarial benchmark
+> and the cost of auditable detection**
+> Runsheng Luan, Ping Jiang, Ming Yang, Xiaogang Wang
 > *(submitted to Journal of Information Security and Applications)*
 
 ScriptGuard normalises adversarial text variants, scores a message with a
 character *n*-gram TF-IDF model and a hand-built fraud-script rule library in
 parallel, fuses the two feature blocks, and emits **matched rules and offending
 spans** alongside every decision. The claim defended in the paper is
-*a auditability at comparable accuracy*, not a new accuracy ceiling.
+*auditability at a quantified cost* — we measure what the auditable operating
+point gives up in macro-F1 and in latency — rather than a new accuracy ceiling.
 
 ---
 
