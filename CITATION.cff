@@ -12,21 +12,24 @@ keywords:
   - text normalization
   - rule-based detection
   - explainability
+# TODO before submission: add ORCID iDs for all four authors, and replace the
+# placeholder affiliation of Xiaogang Wang once his institution is confirmed.
 authors:
   - family-names: Luan
     given-names: Runsheng
     email: rsl229560@seu.edu.cn
-    affiliation: "School of Cyberspace Security, Southeast University, Nanjing, China"
-    orcid: ""
+    affiliation: "School of Cyberspace Security, Southeast University, Nanjing 211189, China"
   - family-names: Jiang
     given-names: Ping
-    affiliation: "School of Cyberspace Security, Southeast University, Nanjing, China"
+    email: greg8899@189.cn
+    affiliation: "School of Computer Science and Engineering, Southeast University, Nanjing 211189, China"
   - family-names: Yang
     given-names: Ming
-    affiliation: "School of Cyberspace Security, Southeast University, Nanjing, China"
+    email: yangming2002@seu.edu.cn
+    affiliation: "School of Computer Science and Engineering, Southeast University, Nanjing 211189, China"
   - family-names: Wang
     given-names: Xiaogang
-    affiliation: ""
+    affiliation: "[Affiliation to be confirmed]"
 contact:
   - family-names: Luan
     given-names: Runsheng
