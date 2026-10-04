@@ -3,7 +3,7 @@ message: "If you use this code, please cite the manuscript below."
 title: "Keyword-targeted evasion of Chinese SMS filters: an adversarial benchmark and the cost of auditable detection"
 type: software
 license: MIT
-repository-code: "https://github.com/<OWNER>/scriptguard"
+repository-code: "https://github.com/cherami-hub/scriptguard"
 keywords:
   - fraud detection
   - SMS
