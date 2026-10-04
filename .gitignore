@@ -25,3 +25,10 @@ venv/
 .DS_Store
 Thumbs.db
 ~$*
+
+# ---- credentials (never commit a personal access token) ----
+.gh_token
+gh_token.txt
+.git-credentials
+*.pem
+*.key
