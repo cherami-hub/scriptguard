@@ -12,24 +12,35 @@ keywords:
   - text normalization
   - rule-based detection
   - explainability
-# TODO before submission: add ORCID iDs for all four authors, and replace the
-# placeholder affiliation of Xiaogang Wang once his institution is confirmed.
+# TODO before submission (P0): each author supplies their own ORCID iD, added
+# as a sibling key of the matching author, e.g.
+#     orcid: "https://orcid.org/0000-0003-2721-5266"
+# An ORCID search for "runsheng luan" returns exactly one record,
+# 0000-0003-2721-5266 (registered 2018, claimed, but with no public content),
+# so it may well be yours -- confirm before using it. Searches for Ping Jiang
+# and Ming Yang return many namesakes, and none can be disambiguated from the
+# public record, so those two have to come from the authors themselves.
+# Never guess an iD: attaching the wrong ORCID is a record-level error.
 authors:
   - family-names: Luan
     given-names: Runsheng
     email: rsl229560@seu.edu.cn
     affiliation: "School of Cyberspace Security, Southeast University, Nanjing 211189, China"
+    # orcid: "https://orcid.org/0000-XXXX-XXXX-XXXX"
   - family-names: Jiang
     given-names: Ping
     email: greg8899@189.cn
     affiliation: "School of Computer Science and Engineering, Southeast University, Nanjing 211189, China"
+    # orcid: "https://orcid.org/0000-XXXX-XXXX-XXXX"
   - family-names: Yang
     given-names: Ming
     email: yangming2002@seu.edu.cn
     affiliation: "School of Computer Science and Engineering, Southeast University, Nanjing 211189, China"
+    # orcid: "https://orcid.org/0000-XXXX-XXXX-XXXX"
   - family-names: Wang
     given-names: Xiaogang
-    affiliation: "[Affiliation to be confirmed]"
+    affiliation: "Changzhou Yongjia Software Technology Co., Ltd., Changzhou 213164, China"
+    # orcid: "https://orcid.org/0000-XXXX-XXXX-XXXX"
 contact:
   - family-names: Luan
     given-names: Runsheng

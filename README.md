@@ -30,6 +30,7 @@ point gives up in macro-F1 and in latency — rather than a new accuracy ceiling
 │   ├── run_independent_vocab_attack.py  attacker with an unseen vocabulary
 │   ├── run_llm_eval.py               three-vendor LLM comparison (0-shot/1-shot)
 │   ├── run_bert_baseline.py          fine-tuned RoBERTa accuracy ceiling
+│   ├── chifraud_drift.py             out-of-time evaluation on ChiFraud (Table 7)
 │   ├── extra_metrics.py              per-class and threshold-free metrics
 │   └── analyze_{v5,v6}.py            turn result JSONs into paper tables
 ├── figures/
@@ -101,6 +102,21 @@ python src/run_bert_baseline.py            # needs torch + transformers
 python src/run_llm_eval.py                 # needs API keys, see the file header
 ```
 
+The out-of-time drift study of Section 5.9 runs against ChiFraud, an external
+Chinese SMS benchmark whose terms do not allow redistribution, so point the
+script at your own checkout of it:
+
+```bash
+export CHIFRAUD_DIR=/path/to/ChiFraud/dataset
+python src/chifraud_drift.py --paired                                   # Table 7
+python src/chifraud_drift.py --paired --max-iter 5000 \
+       --out results/chifraud_drift_converged.json                      # Section 5.9
+```
+
+The second command raises the logistic-regression iteration budget, which is
+what the paired tests in Section 5.9 are computed on. `results/README.md`
+explains the difference between the two budgets and why both files are shipped.
+
 `run_v5_experiments.py` supports `--task`, `--seeds`, `--conds` and `--models`
 so a single seed/condition block can be rerun in isolation. Results are flushed
 to `results/v5_seeds.json` after **every** block by atomic replace, so an
@@ -120,6 +136,8 @@ interrupted run never loses completed work.
 | `results/bert_results.json` | `run_bert_baseline.py` | the RoBERTa ceiling |
 | `results/chifraud_baseline.json` | external benchmark (ChiFraud, Chinese SMS) | Fig. 6(a) |
 | `results/lamda_drift.json` | external benchmark (LAMDA, Android apps) | Fig. 6(b) |
+| `results/chifraud_drift.json` | `chifraud_drift.py --paired` | Table 7 (Section 5.9) |
+| `results/chifraud_drift_converged.json` | `chifraud_drift.py --paired --max-iter 5000` | the paired tests in Section 5.9 |
 
 `results/chifraud_baseline.json` and `results/lamda_drift.json` are small,
 purely aggregate files (scores and class counts per year) from the two external
