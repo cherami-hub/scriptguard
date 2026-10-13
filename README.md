@@ -52,8 +52,15 @@ All scripts resolve their inputs relative to the repository root
 The corpus is **not redistributed here** — it is the FBS-SMS dataset released
 with
 
-> Zhang et al. *Characterizing and Detecting Fraudulent Activities on Mobile
-> Devices: A Case Study of SMS*. (Tsinghua University)
+> Y. Zhang, B. Liu, C. Lu, Z. Li, H. Duan, S. Hao, M. Liu, Y. Liu, D. Wang and
+> Q. Li. *Lies in the Air: Characterizing Fake-base-station Spam Ecosystem in
+> China*. ACM CCS 2020, pp. 521–534.
+> DOI: <https://doi.org/10.1145/3372297.3417257>
+> Dataset repository: <https://github.com/Cypher-Z/FBS_SMS_Dataset>
+
+The dataset authors ask that users cite the CCS'20 paper above — please do so
+if you reuse this corpus. The released copy contains ~14K real fake-base-station
+messages, manually labelled under 14 categories, with contacts anonymised.
 
 Download it, then lay it out as
 
